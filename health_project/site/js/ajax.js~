@@ -1,0 +1,7 @@
+      $(function () {
+                $("#id_search_text").autocomplete({
+                    source:"/disease/search/",
+                    minLength: 2,
+                });
+            });
+

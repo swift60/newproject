@@ -1,0 +1,8 @@
+{% if disease.count > 0 %}
+{% for dis in disease %}
+<li class="organised">
+<a href="/disease/detail/{{dis.id}}">{{dis.disease|capfirst}}</li>
+{% endfor %} 
+{% else%}
+<li class="unorganised">No Data Available</li>
+{% endif %}

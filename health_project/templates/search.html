@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{% block title %}
+<title>disease search</title>
+{% endblock %}
+{% block js %}
+{% load staticfiles %}
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" media="all" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
+</script> <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+<script src="{% static "js/ajax.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/style2.css">
+{% endblock %}
+{% block content %}
+<body class="body">
+	<header class="mainheader1">
+		
+			
+		<img class="banner" src="{% static "image/banner.png" %}">
+         
+         <nav>
+         	<div class="get"><div class="get1"><h2>Search Diseases Here ...</h2></div>
+         	<div class="form">
+<form action="/home/search" method="GET" class="main">	
+{{form.as_p}}
+<input type="submit" id="sbutton2" class="btn btn-large btn-primary"  value="submit">
+</form>
+</div>
+</nav>  
+	</header>
+		
+	
+		 <footer>  
+		 </footer> 
+		        
+	</body>
+
+
+{% endblock %}
